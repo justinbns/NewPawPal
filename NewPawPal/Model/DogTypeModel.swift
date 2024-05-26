@@ -20,16 +20,16 @@ import Vision
 class DogTypeModel: ObservableObject {
     @Published var detectedDogType: String?
     @Published var showAlert: Bool = false
-    @Published var showImage: Bool = false // New state to show the image sheet
-    @Published var scanningEnabled: Bool = true // Flag to control scanning
-    @Published var showDogDetailsPage: Bool = false // Flag to control showing dog details page
+    @Published var showImage: Bool = false
+    @Published var scanningEnabled: Bool = true // Flag untuk scanning
+    @Published var showDogDetailsPage: Bool = false // Flag untuk menunjukkan detail page
 
     func updateDogType(dogType: String, confidence: Double) {
         detectedDogType = dogType
         if confidence > 0.8 {
             showImage = true
             scanningEnabled = false // Stop scanning
-            showDogDetailsPage = true // Show dog details page
+            showDogDetailsPage = true // pindah ke page detail
         } else {
             showAlert = true
         }
@@ -53,12 +53,12 @@ class DogTypeModel: ObservableObject {
 
     func resumeScanning() {
         scanningEnabled = true
-        showDogDetailsPage = false // Hide dog details page
+        showDogDetailsPage = false
     }
 
     func getDogImage() -> Image {
         guard let dogType = detectedDogType else { return Image(systemName: "questionmark.circle") }
-        return Image(dogType) // Use the detected dog type directly to fetch the image
+        return Image(dogType)
     }
 
     func getDogDescription() -> String {

@@ -21,7 +21,7 @@ struct ContentView: View {
                     .fontWeight(.bold)
                     .padding()
 
-                Image("newdoglogo") // Ensure "newdoglogo" is correctly named in Assets
+                Image("newdoglogo")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 200)
@@ -38,8 +38,7 @@ struct ContentView: View {
                                 .font(.system(size: 40))
                         }
                     }
-
-                    Spacer().frame(width: 100) // Add space between the buttons
+                    Spacer().frame(width: 100)
 
                     Button(action: {
                         showImagePicker = true
@@ -66,12 +65,12 @@ struct ContentView: View {
                 ImagePicker(image: $inputImage)
             }
         }
-        .navigationViewStyle(StackNavigationViewStyle()) // Force single column navigation
+        .navigationViewStyle(StackNavigationViewStyle()) 
     }
 
     func loadImage() {
         guard let inputImage = inputImage else { return }
-        // Call a method in your viewModel to detect the dog type from the selected image
+        //panggil method untuk deteksi jenis anjing dari gambar galeri
         viewModel.detectDogType(from: inputImage)
     }
 }

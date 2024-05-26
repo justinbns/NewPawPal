@@ -44,7 +44,7 @@ struct DetailView: View {
                 }
             }
             
-            ScrollView {  // Added ScrollView here
+            ScrollView {  //Scrollview agar bisa discroll (tidak menampilkan informasi hanya setengah)
                 VStack(alignment: .leading) {
                     Text(detectedDogType)
                         .font(.title)

@@ -45,6 +45,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F19655042C03B3CC00E257C0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1A277242C025CEB00FCC802 /* NewPawPalApp.swift */,
+				F1A2773C2C025E3100FCC802 /* Color+Hex.swift */,
+				F1A277362C025D6D00FCC802 /* DogTrainSet.mlmodel */,
+				F1A277282C025CEC00FCC802 /* Assets.xcassets */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
 		F1A277182C025CEB00FCC802 = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +75,10 @@
 		F1A277232C025CEB00FCC802 /* NewPawPal */ = {
 			isa = PBXGroup;
 			children = (
-				F1A277242C025CEB00FCC802 /* NewPawPalApp.swift */,
+				F19655042C03B3CC00E257C0 /* Support Files */,
 				F1A277332C025D2200FCC802 /* View */,
 				F1A2773B2C025DCA00FCC802 /* Model */,
-				F1A2773C2C025E3100FCC802 /* Color+Hex.swift */,
-				F1A277282C025CEC00FCC802 /* Assets.xcassets */,
 				F1A2772A2C025CEC00FCC802 /* NewPawPal.entitlements */,
-				F1A277362C025D6D00FCC802 /* DogTrainSet.mlmodel */,
 				F1A2772B2C025CEC00FCC802 /* Preview Content */,
 			);
 			path = NewPawPal;
